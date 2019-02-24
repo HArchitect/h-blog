@@ -8,5 +8,4 @@ Rails.application.routes.draw do
   get 'math' => 'math#index'
 
   # Misc
-  get 'troop1923' => 'misc#troop1923'
 end
