@@ -1,0 +1,24 @@
+<h1>Factors</h1>
+
+<script>
+    function calculate(){
+        var num = document.getElementById("num1").value;
+        const list = document.getElementById("list");
+        var i;
+        var out = "";
+        for (i = 0; i <= num; i++) {
+            if ((num % i) == 0) {
+                out += "<li>" + i.toString();
+            }
+        }
+        list.innerHTML = out;
+    }
+</script>
+
+
+<form onsubmit="return false">
+    <input id="num1" type="number" min="1" max="1000000"/>
+    <input type="submit" value="calculate" onclick="calculate()"/>
+</form>
+<ul id="list">
+</ul>

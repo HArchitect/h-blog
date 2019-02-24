@@ -1,0 +1,48 @@
+.post {
+    background-color: #000035;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+
+.menu-bar {
+    background-color: #00fff9;
+    margin-top: 15px;
+    padding: 1vh;
+    height: 2vh;
+    color: black;
+}
+
+.menu-bar > div {
+    margin-left: 6px;
+    float: left;
+    color: black;
+    font-size: 2vh;
+}
+
+.menu-bar > div > a {
+    color: #000035 !important;
+}
+
+body {
+    color: #979797;
+    background-color: black;
+}
+
+a {
+    color: #00fff9;
+}
+
+div.weak {
+    font-weight: lighter;
+    font-size: x-small;
+}
+
+div.footer {
+    position: fixed;
+    left: 5px;
+    bottom: 5px;
+    height: 20px;
+    width: 100%;
+}

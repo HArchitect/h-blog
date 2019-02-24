@@ -1,0 +1,14 @@
+<h1><%= @post.title %></h1>
+
+<div><%= @post.body %></div>
+<b>Date created: <%= @post.created_at %></b>
+<div class="menu-bar">
+    <div>
+        <% if (@post.removable) %>
+            <%= link_to("Delete Post", post_path(@post), method: :delete, data: { confirm: "
+            Are you sure you would like to delete this post?" }) %>
+        <% else %>
+            (This post is cannot be deleted)
+        <% end %>
+    </div>
+</div>
