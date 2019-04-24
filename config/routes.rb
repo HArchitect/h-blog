@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :posts
 
   # Math
+  get 'math/quadratic_factors' => 'math#quadratic_factors'
   get 'math/factors' => 'math#factors'
   get 'math' => 'math#index'
 
