@@ -14,74 +14,74 @@
         mult = Math.abs(mult);
         var complete = false;
         for (var i1 = 1; i1 <= mult; i1++) {
-        for (i2 = 1; i2 <= mult; i2++) {
-            if (i1 * i2 == mult) {
-            if (diff && (i1 - i2 == input2 || i2 - i1 == input2)) {
-                complete = true;
-                break;
-            } else if (!diff && i1 + i2 == Math.abs(input2)) {
-                complete = true;
+            for (i2 = 1; i2 <= mult; i2++) {
+                if (i1 * i2 == mult) {
+                    if (diff && (i1 - i2 == input2 || i2 - i1 == input2)) {
+                        complete = true;
+                        break;
+                    } else if (!diff && i1 + i2 == Math.abs(input2)) {
+                        complete = true;
+                        break;
+                    }
+                }
+            }
+            if (complete) {
                 break;
             }
-            }
-        }
-        if (complete) {
-            break;
-        }
         }
         if (!complete) {
             document.getElementById("answer_out").innerHTML = "This quadratic is not factorable";
         } else {
         
-        var firstN = false;
-        var secondN = false;
-        
-        if (diff) {
-            if (i1 - i2 == input2) {
-            secondN = true;
-            } else {
-            firstN = true;
+            var firstN = false;
+            var secondN = false;
+            
+            if (diff) {
+                if (i1 - i2 == input2) {
+                    secondN = true;
+                } else {
+                    firstN = true;
+                }
+            } else if (input2 < 0) {
+                firstN = true;
+                secondN = true;
             }
-        } else if (input2 < 0) {
-            firstN = true;
-            secondN = true;
-        }
-        
-        var answer = "(";
-        
-        if (i1 % input1 == 0) {
-            i1 /= input1;
-        } else {
-            answer += input1;
-        }
-        
-        answer += "x";
-        
-        
-        if (firstN) {
-            answer += "-";
-        } else {
-            answer += "+";
-        }
-        
-        answer += i1;
-        answer += ")(";
-        
-        if (i2 % input1 == 0) {
-            i2 /= input1;
-        } else {
-            answer += input1;
-        }
-        answer += "x";
-        if (secondN) {
-            answer += "-";
-        } else {
-            answer += "+";
-        }
-        answer += i2;
-        answer += ")";
+            
+            var answer = "(";
+            
+            if (i1 % input1 == 0) {
+                i1 /= input1;
+            } else {
+                answer += input1;
+            }
+            
+            answer += "x";
+            
+            
+            if (firstN) {
+                answer += "-";
+            } else {
+                answer += "+";
+            }
+            
+            answer += i1;
+            answer += ")(";
+            
+            if (i2 % input1 == 0) {
+                i2 /= input1;
+            } else {
+                answer += input1;
+            }
+            answer += "x";
+            if (secondN) {
+                answer += "-";
+            } else {
+                answer += "+";
+            }
+            answer += i2;
+            answer += ")";
 
-        document.getElementById("answer_out").innerHTML = answer;
+            document.getElementById("answer_out").innerHTML = answer;
         }
     }
 </script>
