@@ -7,4 +7,8 @@ class MathController < ApplicationController
     def factors
 
     end
+
+    def quadratic_factors
+
+    end
 end
