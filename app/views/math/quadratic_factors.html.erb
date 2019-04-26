@@ -2,6 +2,7 @@
 
 <script>
     function calculate() {
+        document.getElementById("answer_out").innerHTML = "Calculating.....";
         var input1 = Math.round(document.getElementById("num1").value);
         var input2 = Math.round(document.getElementById("num2").value);
         var input3 = Math.round(document.getElementById("num3").value);
@@ -90,8 +91,9 @@
     a: <input id="num1" type="number" min="1" max="1000000"/>
     b: <input id="num2" type="number" min="1" max="1000000"/>
     c: <input id="num3" type="number" min="1" max="1000000"/>
-    <br>
-    <input type="submit" value="calculate" onclick="calculate()"/>
+    <div style="margin: 3vh;">
+        <input type="submit" value="calculate" onclick="calculate()"/>
+    </div>
 </form>
 
 <div id="answer_out" style="margin: 10vh; font-size: 10vh;">
